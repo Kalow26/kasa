@@ -9,15 +9,18 @@ import About from "./pages/About/About";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Error from "./components/ErrorPage/Error";
+import "./css/style.css"
 
 const Layout = () => {
   return (
-    <div className="app">
-      <Navbar/>
-      <Outlet/>
-      <Footer/>
-    </div>
-  )
+    <>
+      <Navbar />
+      <main className="main">
+        <Outlet />
+      </main>
+      <Footer />
+    </>
+  );
 }
 
 const router = createBrowserRouter ( [

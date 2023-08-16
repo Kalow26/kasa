@@ -1,0 +1,29 @@
+@use "../utils/" as *;
+
+.housing {
+    margin-block: 43px 50px;
+    background-color: $gray;
+    border-radius: 25px;
+
+    &__wrapper {
+        padding: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 22px 0;
+        }
+        @include phone {
+            grid-template-columns: 1fr;
+            padding: 22px 0;
+        }
+    }
+
+    @include tablet {
+        margin: 0;
+        background-color: $white;
+        border-radius: 0;
+    }
+}

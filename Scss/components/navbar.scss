@@ -1,0 +1,38 @@
+@use "../utils/" as *;
+
+.navbar {
+    margin-block: 45px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 100px;
+
+    &__logo img {
+        width: 210px;
+        height: 68px;
+
+        @include phone {
+            width: 145px;
+            height: 46px;
+        }
+    }
+
+    &__links a{
+        padding-left: 57px;
+        font-size: 24px;
+
+        @include phone {
+            font-size: 12px;
+            padding-left: 26px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @include phone {
+        margin-block: 20px 27px;
+        margin-inline: 20px;
+    }
+}
