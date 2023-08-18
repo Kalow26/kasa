@@ -1,0 +1,47 @@
+@use "../utils/" as *;
+
+.dropdown {
+    flex: 1;
+    
+    &__button {
+        position: relative;
+        @include flex (center, space-between);
+        width: 100%;
+        border-radius: 5px;
+        background-color: $red;
+        color: white;
+        font-size: clamp(0.813rem, 0.57rem + 1.033vw, 1.5rem);
+        border: 0;
+        cursor: pointer;
+        padding: 10px 15px;
+        text-transform: capitalize;
+        z-index: 100;
+       
+
+        &__arrow {
+            width: clamp(1.375rem, 1.155rem + 0.939vw, 2rem);
+            transition: transform 0.2s;
+
+            &--rotate {
+                transform: rotate(180deg);
+                transition: transform 0.2s;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        background-color: $gray;
+        color: $red;
+        font-size: clamp(0.75rem, 0.618rem + 0.563vw, 1.125rem);
+        padding: 20px;
+        z-index: -100;
+
+        ul li {
+            padding-top: 2px;
+        }
+
+    }
+
+
+}

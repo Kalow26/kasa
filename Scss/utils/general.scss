@@ -14,8 +14,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
-	
 }
 
 .main {
@@ -30,3 +28,19 @@ a {
 	text-decoration: none;
 	color: $red;
 }
+
+li {
+	list-style: none;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+  }

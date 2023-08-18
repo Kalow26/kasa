@@ -1,0 +1,13 @@
+@use "../utils/" as *;
+
+.lodge__content__rating {
+    @include flex (center, center, row, 10px);
+
+    li img {
+        width: 23px;
+
+        @include phone {
+            width: 15px;
+        }
+    }
+}

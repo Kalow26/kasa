@@ -1,0 +1,91 @@
+@use "../utils/" as *;
+
+.lodge {
+    width: 100%;
+
+    .lodge-bg {
+        width: 100%;
+        object-fit:cover;
+        height: clamp(15.938rem, 12.416rem + 15.023vw, 25.938rem);
+        border-radius: 25px;
+    }
+
+    &__content {
+        @include flex (center, space-between);
+        color: $red;
+        padding-block: 30px;
+        padding-inline: 5px;
+        width: 100%;
+        
+            &__info {
+                @include flex (flex-start, flex-start, column);
+                // flex: 1;
+
+                h2 {
+                    font-size: clamp(1.125rem, 0.729rem + 1.69vw, 2.25rem);
+                    font-weight: 400;
+                }
+
+                h3 {
+                    font-size: clamp(0.875rem, 0.787rem + 0.376vw, 1.125rem);
+                    font-weight: 400;
+                }
+            }
+        &__tags {
+            padding-top: 20px;
+            @include flex (center, flex-start, row, 10px);
+
+            li {
+                padding: 2px 30px;
+                text-align: center;
+                background-color: $red;
+                color: $white;
+                font-size: clamp(0.625rem, 0.537rem + 0.376vw, 0.875rem);
+                border-radius: 5px;
+
+                @include phone {
+                    padding: 2px 10px;
+                }
+
+                @include tablet {
+                    padding: 2px 12px;
+                }
+            }
+        }
+
+        &__host {
+            @include flex(flex-end, center, column, 21px);
+            padding-top: 16px;
+
+            figure {
+                @include flex (center, flex-end, row, 10px);
+                width: 90px;
+
+                img {
+                    border-radius: 50%;
+                    width: 64px;
+
+                    @include phone {
+                        width: 32px
+                    }
+                }
+
+                
+            }
+            @include phone {
+                @include flex (center, space-between, row-reverse)
+            }
+        }
+
+
+        @include phone {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    &__desc {
+        @include flex(flex-start, space-between, row, 76px);
+
+    }
+}

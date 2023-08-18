@@ -1,25 +1,13 @@
-import { useRouteError } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
 
 const Error = () => {
-    const error = useRouteError();
-   
   return (
-    <>
-        <Navbar/>
-        <div id="error-page">
-            <h1>Oops</h1>
-            <p>Sorry, an unexpected error has occured</p>
-            <p>
-                <i>
-                    {error.statusText || error.message}
-                </i>
-            </p>
-        </div>
-        <Footer/>
-    </>
-  )
+    <div id="error-page">
+      <h1>404</h1>
+      <p>Oups! La page que vous demandez n'existe pas.</p>
+      <Link to="/">Retourner sur la page d’accueil</Link>
+    </div>
+  );
 }
 
 export default Error

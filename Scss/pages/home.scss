@@ -9,7 +9,11 @@
         padding: 50px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: clamp(15.938rem, 14.067rem + 7.981vw, 21.25rem);
         gap: 60px;
+        margin: 0 auto;
+        justify-content: center;
+  align-content: flex-start;
 
         @include tablet {
             grid-template-columns: repeat(2, 1fr);
