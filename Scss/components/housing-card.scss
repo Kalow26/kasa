@@ -37,7 +37,7 @@
     }
 
     &:hover .overlay + img {
-        filter: sepia(50%);
+        filter: grayscale(80%);
     }
 }
 
