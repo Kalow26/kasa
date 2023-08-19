@@ -19,7 +19,7 @@ body {
 .main {
 	margin-inline: 100px;
 
-	@include phone {
+	@include tablet {
 		margin-inline: 20px;
 	}
 }

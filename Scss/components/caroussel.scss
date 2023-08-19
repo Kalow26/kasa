@@ -32,6 +32,12 @@
             all: unset;
             cursor: pointer;
             padding-inline: 23px;
+
+           img {
+            @include tablet {
+                width: 24px;
+            }
+           }
         }
     }
 

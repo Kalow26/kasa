@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 const HousingCard = (props) => {
-    const {title, cover, id} = props
+    const {title, cover, id, index} = props
   return (
-    <div className="card">
+    <div className="card" style={{animationDelay: `${index *50}ms`}}>
       <Link to={`/housing/${id}`}>
         <div className="overlay"></div>
         <img src={cover} alt={title}/>

@@ -28,4 +28,8 @@
             padding-bottom: 58px;
         }
     }
+
+    @include phone {
+        margin-top: 20px;
+    }
 }

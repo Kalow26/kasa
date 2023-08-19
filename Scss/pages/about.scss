@@ -1,0 +1,14 @@
+@use "../utils/" as *;
+
+.about {
+
+    &__items {
+        margin : 38px 108px;
+        @include flex (stretch, center, column, 40px);
+
+        @include tablet {
+            margin: 19px 0;
+            gap: 30px;
+        }
+    }
+}

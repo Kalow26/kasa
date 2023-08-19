@@ -22,7 +22,6 @@ const Caroussel = ({ imgArr }) => {
           <img src={img} alt="logement" key={index}/>
         ))}
       </div>
-      <img src={imgArr[current]} alt="logement" className="caroussel__bg" />
       <div className="caroussel__controls">
         <button type="button" className="caroussel__controls__left" onClick={clickLeft}>
           <img

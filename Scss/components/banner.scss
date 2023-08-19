@@ -14,7 +14,6 @@
         inset: 0;
         background-color: black;
         opacity: 0.3;
-        mix-blend-mode: darken;
         z-index: 1;
 
         @include phone {
@@ -24,25 +23,26 @@
 
         &__content {
             @include flex (center, center);
+            height: 100%;
             
     
             h1 {
                 font-weight: 500;
                 color: $white;
                 z-index: 2;
-                padding-block: 78px;
                 font-size: 48px;
-                margin-inline: 16px;
+                animation: appear 1.9s forwards;
 
-                @include phone {
-                    padding-block: 32px;
+                @include tablet{
                     font-size: 24px;
                     width: 220px;
                 }
             }
     
-            @include phone {
+            @include tablet {
                 justify-content: flex-start;
+                padding-left: 35px;
+                padding-block: 32px;
             }
         }
     
@@ -54,5 +54,24 @@
 
 .banner--home {
     background-image: url("../../src/assets/home-bg.png");
+    height: 233px;
+
+    @include tablet {
+        height: 111px;
+    }
    
+}
+.banner--about  {
+    background-image: url("../../src/assets/about-bg.png");
+    height: 233px;
+   
+}
+
+@keyframes appear {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateY(0);
+    }
 }

@@ -6,7 +6,12 @@ const Navbar = () => {
   return (
     <header className='navbar'>
       <div className="navbar__logo">
-        <img src={logo} alt="Logo du site Kasa" />
+      <Link to="/">
+        <img
+          src={logo}
+          alt="Logo du site Kasa"
+        />
+      </Link>
       </div>
       <div className="navbar__links">
         <Link to="/">Accueil</Link>

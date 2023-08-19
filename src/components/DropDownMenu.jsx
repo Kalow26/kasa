@@ -1,5 +1,5 @@
 import { useState } from "react";
-import arrow from "../assets/arrow-down.svg";
+import arrow from "../assets/arrow-up.svg";
 
 
 const DropDownMenu = (props) => {

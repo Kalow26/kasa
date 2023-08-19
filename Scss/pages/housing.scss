@@ -80,5 +80,9 @@
     &__desc {
         @include flex(flex-start, space-between, row, 76px);
 
+        @include tablet {
+            @include flex (stretch, center, column, 20px);
+        }
+
     }
 }

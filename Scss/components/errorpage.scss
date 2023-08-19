@@ -1,0 +1,30 @@
+@use "../utils/" as *;
+
+.error {
+    width: 100%;
+    @include flex (center, center, column, 140px);
+    color: $red;
+    margin-block: 141.5px;
+
+    h1 {
+        font-size: clamp(6rem, 1.775rem + 18.028vw, 18rem);
+    }
+
+    p {
+        font-size: clamp(1.125rem, 0.729rem + 1.69vw, 2.25rem);
+        text-align: center;
+        @include tablet {
+            width: 260px;
+        }
+    }
+
+    a {
+        font-size: clamp(0.875rem, 0.787rem + 0.376vw, 1.125rem);
+        text-decoration: underline;
+    }
+
+    @include tablet {
+        gap: 113px;
+        margin-block: 113px;
+    }
+}

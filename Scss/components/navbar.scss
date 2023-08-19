@@ -2,9 +2,7 @@
 
 .navbar {
     margin-block: 45px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex (center, space-between);
     margin-inline: 100px;
 
     &__logo img {
@@ -17,21 +15,47 @@
         }
     }
 
-    &__links a{
-        padding-left: 57px;
-        font-size: 24px;
+    &__links {
+        display: flex;
+        gap: 57px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
 
-        @include phone {
-            font-size: 12px;
-            padding-left: 26px;
+        a {
+            font-size: 24px;
+            position: relative;
+    
+            @include phone {
+                font-size: 12px;
+            }
+    
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                border-radius: 0px;
+                background-color: $red;
+                bottom: -4px;
+                left: 0;
+                transform-origin: right;
+                transform: scaleX(0);
+                transition: transform .3s ease-in-out; 
+            }
+    
+            &:hover::before {
+                transform-origin: left;
+                transform: scaleX(1);
+            }
         }
-
-        &:hover {
-            text-decoration: underline;
+        @include phone {
+            gap: 26px;
         }
     }
+    
 
-    @include phone {
+    @include tablet {
         margin-block: 20px 27px;
         margin-inline: 20px;
     }
