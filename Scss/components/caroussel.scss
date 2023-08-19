@@ -1,0 +1,36 @@
+@use "../utils/" as *;
+
+.caroussel {
+    position: relative;
+   
+    &__bg {
+        width: 100%;
+        object-fit:cover;
+        height: clamp(15.938rem, 12.416rem + 15.023vw, 25.938rem);
+        border-radius: 25px;
+    }
+
+    &__controls {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        @include flex (center, space-between);
+
+        button {
+            all: unset;
+            cursor: pointer;
+            padding-inline: 23px;
+        }
+    }
+
+    &__counter {
+        position: absolute;
+        bottom: 24px;
+        left: 50%;
+        color: $white;
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
+

@@ -28,8 +28,8 @@ const DropDownMenu = (props) => {
         />
       </button>
       
-      {open && (
-        <div className={`${open ? 'dropdown__content' : ''}`}>
+      
+        <div className={`dropdown__content ${open ? 'dropdown__content--open' : 'dropdown__content--close'}`}>
           {contentTest === "string" ?
             <p>{content}</p>
             :
@@ -41,7 +41,7 @@ const DropDownMenu = (props) => {
         
         }
         </div>
-      )}
+     
         </div>
     
   );

@@ -1,11 +1,10 @@
 import { useParams } from "react-router-dom";
 import { data } from "../../data";
-import RatingStars from "../../components/RatingStars"
+import RatingStars from "../../components/RatingStars";
 import Error from "../../components/ErrorPage/Error";
 import Caroussel from "../../components/Caroussel";
 import DropDownMenu from "../../components/DropDownMenu";
 import React from "react";
-
 
 const Housing = () => {
   let { id } = useParams();
@@ -16,8 +15,7 @@ const Housing = () => {
 
   return (
     <section className="lodge">
-      {/* <Caroussel imgArr={lodge.pictures} /> */}
-      <img src={lodge.pictures[0]} alt="" className="lodge-bg"/>
+      <Caroussel imgArr={lodge.pictures} />
       <div className="lodge__content">
         <div className="lodge__content__info">
           <h2>{lodge.title}</h2>

@@ -253,8 +253,53 @@ li {
   padding: 20px;
   z-index: -100;
 }
+.dropdown__content--open {
+  max-height: max-content;
+  transition: all 0.2s ease-in;
+  transform: translateY(0);
+}
+.dropdown__content--close {
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+  transform: translateY(-50px);
+}
 .dropdown__content ul li {
   padding-top: 2px;
+}
+
+.caroussel {
+  position: relative;
+}
+.caroussel__bg {
+  width: 100%;
+  object-fit: cover;
+  height: clamp(15.938rem, 12.416rem + 15.023vw, 25.938rem);
+  border-radius: 25px;
+}
+.caroussel__controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+}
+.caroussel__controls button {
+  all: unset;
+  cursor: pointer;
+  padding-inline: 23px;
+}
+.caroussel__counter {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .housing {
@@ -294,12 +339,6 @@ li {
 
 .lodge {
   width: 100%;
-}
-.lodge .lodge-bg {
-  width: 100%;
-  object-fit: cover;
-  height: clamp(15.938rem, 12.416rem + 15.023vw, 25.938rem);
-  border-radius: 25px;
 }
 .lodge__content {
   display: flex;

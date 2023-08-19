@@ -3,13 +3,6 @@
 .lodge {
     width: 100%;
 
-    .lodge-bg {
-        width: 100%;
-        object-fit:cover;
-        height: clamp(15.938rem, 12.416rem + 15.023vw, 25.938rem);
-        border-radius: 25px;
-    }
-
     &__content {
         @include flex (center, space-between);
         color: $red;
