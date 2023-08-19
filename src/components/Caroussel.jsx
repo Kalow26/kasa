@@ -5,18 +5,10 @@ import arrowRight from "../assets/arrow-right.svg";
 const Caroussel = ({ imgArr }) => {
 
   const clickRight = () => {
-    if (current === arrLength - 1) {
-      setCurrent(0)
-    } else {
-      setCurrent(current+1)
-    }
+    setCurrent (current === arrLength -1 ? 0 : (prev) => prev + 1)
   }
   const clickLeft = () => {
-    if (current === 0) {
-      setCurrent(arrLength - 1);
-    } else {
-      setCurrent(current - 1);
-    }
+    setCurrent (current === 0 ? arrLength -1 : (prev) => prev - 1)
   };
 
   const arrLength = imgArr.length;
@@ -24,6 +16,12 @@ const Caroussel = ({ imgArr }) => {
 
   return (
     <div className="caroussel">
+      <div className="caroussel__container" style={{ transform: `translateX(-${current * 100}vw)`, width: `${arrLength * 100}vw` }}>
+
+        {imgArr.map ((img, index) => (
+          <img src={img} alt="logement" key={index}/>
+        ))}
+      </div>
       <img src={imgArr[current]} alt="logement" className="caroussel__bg" />
       <div className="caroussel__controls">
         <button type="button" className="caroussel__controls__left" onClick={clickLeft}>
