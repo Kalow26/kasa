@@ -27,7 +27,6 @@ const Caroussel = ({ imgArr }) => {
           <img
             src={arrowLeft}
             alt="bouton controle carroussel gauche"
-            
           />
         </button>
         <button type="button" className="caroussel__controls__right" onClick={clickRight}>

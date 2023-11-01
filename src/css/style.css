@@ -470,7 +470,7 @@ li {
 @media (max-width: 1440px) {
   .about__items {
     margin: 19px 0;
-    gap: 38px;
+    gap: 36.5px;
   }
 }
 
