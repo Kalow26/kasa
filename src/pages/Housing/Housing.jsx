@@ -5,6 +5,9 @@ import Error from "../../components/ErrorPage/Error";
 import Caroussel from "../../components/Caroussel";
 import DropDownMenu from "../../components/DropDownMenu";
 import React from "react";
+import HostFigure from "../../components/HostFigure";
+import LodgeTags from "../../components/LodgeTags";
+
 
 const Housing = () => {
   let { id } = useParams();
@@ -20,17 +23,14 @@ const Housing = () => {
         <div className="lodge__content__info">
           <h2>{lodge.title}</h2>
           <h3>{lodge.location}</h3>
-          <ul className="lodge__content__tags">
-            {lodge.tags.map((tag, index) => (
-              <li key={index}>{tag}</li>
-            ))}
-          </ul>
+         <LodgeTags tags={lodge.tags} />
         </div>
         <div className="lodge__content__host">
-          <figure>
-            <figcaption>{lodge.host.name}</figcaption>
-            <img src={lodge.host.picture} alt={`hôte ${lodge.host.name}`} />
-          </figure>
+          <HostFigure
+            name={lodge.host.name}
+            src={lodge.host.picture}
+            alt={lodge.host.name}
+          />
           <RatingStars rating={lodge.rating} />
         </div>
       </div>
