@@ -1,44 +1,41 @@
-import {data} from '../../data';
-import HousingCards from '../../components/HousingCard';
-import Banner from '../../components/Banner';
-// import { useEffect, useState } from 'react';
+// import {data} from '../../data';
+import HousingCards from "../../components/HousingCard";
+import Banner from "../../components/Banner";
+import { useContext } from "react";
+import { dataContext } from "../../App";
 
 
 const Home = () => {
 
-// const [data, setData] = useState();
+  const { dataBase } = useContext(dataContext)
 
-// const FetchData = async () => {
-//   const response = await fetch("/data.json")
-//   const data = await response.json();
-//   setData(data)
-// }
+  const [data] = dataBase
 
-// useEffect (() => {
-//   FetchData()
-// },[])
-
-
-
-
+  
   return (
     <section>
-      <Banner name="banner--home" title="Chez vous, partout et ailleurs" />
-      <div className="housing">
-        <div className="housing__wrapper">
-          {data.map((item, index) => (
-            <HousingCards
-              id={item.id}
-              title={item.title}
-              cover={item.cover}
-              key={item.id}
-              index={index}
-            />
-          ))}
-        </div>
-      </div>
+      {data ? (
+        <>
+          <Banner name="banner--home" title="Chez vous, partout et ailleurs" />
+          <div className="housing">
+            <div className="housing__wrapper">
+              {data.map((item, index) => (
+                <HousingCards
+                  id={item.id}
+                  title={item.title}
+                  cover={item.cover}
+                  key={item.id}
+                  index={index}
+                />
+              ))}
+            </div>
+          </div>
+        </>
+      ) : (
+        "chargement en cours"
+      )}
     </section>
   );
-}
+};
 
-export default Home
+export default Home;

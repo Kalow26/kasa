@@ -1,15 +1,21 @@
 import { useParams } from "react-router-dom";
-import { data } from "../../data";
 import RatingStars from "../../components/RatingStars";
 import Error from "../../components/ErrorPage/Error";
 import Caroussel from "../../components/Caroussel";
 import DropDownMenu from "../../components/DropDownMenu";
-import React from "react";
 import HostFigure from "../../components/HostFigure";
 import LodgeTags from "../../components/LodgeTags";
+import { useContext } from "react";
+import { dataContext } from "../../App";
+
 
 
 const Housing = () => {
+
+  const { dataBase } = useContext(dataContext)
+
+  const [data] = dataBase
+
   let { id } = useParams();
   const lodge = data.find((item) => id === item.id);
   if (!lodge) {
