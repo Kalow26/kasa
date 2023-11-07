@@ -25,9 +25,11 @@ function App() {
   }, []);
 
   return (
-    <dataContext.Provider value={{allLodges : [data]}}>
-     <RouterProvider router={router} />
-    </dataContext.Provider>
+    <div className="main-container">
+      <dataContext.Provider value={{allLodges : [data]}}>
+      <RouterProvider router={router} />
+      </dataContext.Provider>
+    </div>
   );
 }
 

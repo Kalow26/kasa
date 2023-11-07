@@ -17,8 +17,15 @@ body {
 	overflow-x: hidden;
 }
 
+.main-container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
 .main {
 	margin-inline: 100px;
+	flex: 1;
 
 	@include tablet {
 		margin-inline: 20px;
