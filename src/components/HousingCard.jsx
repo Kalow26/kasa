@@ -1,14 +1,13 @@
-import HomeHousingCard from "./HomeHousingCard";
+import { Link } from "react-router-dom";
 
-const HousingCards = ({title, cover, id, index}) => {
-
-  const animationDelay = 10;
-    
+const HousingCard = ({title, cover, id}) => {
   return (
-    <div className="card" style={{animationDelay: `${index * animationDelay}ms`}}>
-      <HomeHousingCard title={title} cover={cover} id={id} />
-    </div>
-  )
+    <Link to={`/housing/${id}`}>
+      <div className="overlay"></div>
+      <img src={cover} alt={title} />
+      <p className="card__title">{title}</p>
+    </Link>
+  );
 }
 
-export default HousingCards
+export default HousingCard
