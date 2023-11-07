@@ -1,25 +1,8 @@
 import {data} from '../../data';
-import HousingCards from '../../components/HousingCard';
+import HousingCards from '../../components/HousingCards';
 import Banner from '../../components/Banner';
-// import { useEffect, useState } from 'react';
-
 
 const Home = () => {
-
-// const [data, setData] = useState();
-
-// const FetchData = async () => {
-//   const response = await fetch("/data.json")
-//   const data = await response.json();
-//   setData(data)
-// }
-
-// useEffect (() => {
-//   FetchData()
-// },[])
-
-
-
 
   return (
     <section>
