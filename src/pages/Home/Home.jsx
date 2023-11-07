@@ -1,5 +1,4 @@
-// import {data} from '../../data';
-import HousingCards from "../../components/HousingCard";
+import HousingCards from "../../components/HousingCards";
 import Banner from "../../components/Banner";
 import { useContext } from "react";
 import { dataContext } from "../../App";
@@ -7,9 +6,9 @@ import { dataContext } from "../../App";
 
 const Home = () => {
 
-  const { dataBase } = useContext(dataContext)
+  const { allLodges } = useContext(dataContext)
 
-  const [data] = dataBase
+  const [data] = allLodges
 
   
   return (

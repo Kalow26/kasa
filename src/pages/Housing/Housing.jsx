@@ -12,9 +12,9 @@ import { dataContext } from "../../App";
 
 const Housing = () => {
 
-  const { dataBase } = useContext(dataContext)
+  const { allLodges } = useContext(dataContext)
 
-  const [data] = dataBase
+  const [data] = allLodges
 
   let { id } = useParams();
   const lodge = data.find((item) => id === item.id);

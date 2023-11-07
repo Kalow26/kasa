@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <dataContext.Provider value={{dataBase : [data]}}>
+    <dataContext.Provider value={{allLodges : [data]}}>
      <RouterProvider router={router} />
     </dataContext.Provider>
   );
