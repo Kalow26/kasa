@@ -1,9 +1,8 @@
-import {data} from '../../data';
-import HousingCards from '../../components/HousingCards';
-import Banner from '../../components/Banner';
+import { data } from "../../data";
+import HousingCards from "../../components/HousingCards";
+import Banner from "../../components/Banner";
 
 const Home = () => {
-
   return (
     <section>
       <Banner name="banner--home" title="Chez vous, partout et ailleurs" />
@@ -22,6 +21,6 @@ const Home = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Home
+export default Home;

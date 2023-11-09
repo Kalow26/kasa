@@ -8,7 +8,6 @@ import React from "react";
 import HostFigure from "../../components/HostFigure";
 import LodgeTags from "../../components/LodgeTags";
 
-
 const Housing = () => {
   let { id } = useParams();
   const lodge = data.find((item) => id === item.id);
@@ -23,7 +22,7 @@ const Housing = () => {
         <div className="lodge__content__info">
           <h2>{lodge.title}</h2>
           <h3>{lodge.location}</h3>
-         <LodgeTags tags={lodge.tags} />
+          <LodgeTags tags={lodge.tags} />
         </div>
         <div className="lodge__content__host">
           <HostFigure
