@@ -28,27 +28,31 @@ const Caroussel = ({ imgArr }) => {
           <img src={img} alt="logement" key={index} />
         ))}
       </div>
-      <div className="caroussel__controls">
-        <button
-          type="button"
-          className="caroussel__controls__left"
-          onClick={clickLeft}
-        >
-          <img src={arrowLeft} alt="bouton controle carroussel gauche" />
-        </button>
-        <button
-          type="button"
-          className="caroussel__controls__right"
-          onClick={clickRight}
-        >
-          <img src={arrowRight} alt="bouton controle carroussel droite" />
-        </button>
-      </div>
-      <div className="caroussel__counter">
-        <p>
-          {current + 1} / {arrLength}
-        </p>
-      </div>
+      {arrLength > 1 && (
+        <>
+          <div className="caroussel__controls">
+            <button
+              type="button"
+              className="caroussel__controls__left"
+              onClick={clickLeft}
+            >
+              <img src={arrowLeft} alt="bouton controle carroussel gauche" />
+            </button>
+            <button
+              type="button"
+              className="caroussel__controls__right"
+              onClick={clickRight}
+            >
+              <img src={arrowRight} alt="bouton controle carroussel droite" />
+            </button>
+          </div>
+          <div className="caroussel__counter">
+            <p>
+              {current + 1} / {arrLength}
+            </p>
+          </div>
+        </>
+      )}
     </div>
   );
 };
