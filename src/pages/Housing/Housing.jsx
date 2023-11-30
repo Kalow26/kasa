@@ -1,7 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { data } from "../../data";
 import RatingStars from "../../components/RatingStars";
-import Error from "../../components/ErrorPage/Error";
 import Caroussel from "../../components/Caroussel";
 import DropDownMenu from "../../components/DropDownMenu";
 import { useEffect } from "react";
@@ -19,7 +18,7 @@ const Housing = () => {
     if (!lodge) {
       navigate("/error");
     }
-  }, [lodge]);
+  }, [lodge, navigate]);
 
   return (
     <>
