@@ -53,3 +53,7 @@ li {
 	white-space: nowrap;
 	border-width: 0;
   }
+
+  .active {
+	border-bottom: 2px solid $red;
+  }
