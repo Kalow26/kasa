@@ -5,10 +5,6 @@ import About from "../pages/About/About";
 import Error from "../pages/ErrorPage/Error";
 import {Layout} from "./layout"
 
-
-
-
-
 export const router = createBrowserRouter ( [
     {
       path:"/",
