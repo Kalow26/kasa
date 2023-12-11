@@ -3,25 +3,29 @@ import arrowLeft from "../assets/arrow-left.svg";
 import arrowRight from "../assets/arrow-right.svg";
 
 const Caroussel = ({ imgArr }) => {
-
   const TranslateXValue = 100;
 
   const clickRight = () => {
-    setCurrent (current === arrLength -1 ? 0 : (prev) => prev + 1)
-  }
+    setCurrent(current === arrLength - 1 ? 0 : (prev) => prev + 1);
+  };
   const clickLeft = () => {
-    setCurrent (current === 0 ? arrLength -1 : (prev) => prev - 1)
+    setCurrent(current === 0 ? arrLength - 1 : (prev) => prev - 1);
   };
 
   const arrLength = imgArr.length;
-  const [current, setCurrent] = useState(0);  
+  const [current, setCurrent] = useState(0);
 
   return (
     <div className="caroussel">
-      <div className="caroussel__container" style={{ transform: `translateX(-${current * TranslateXValue}vw)`, width: `${arrLength * TranslateXValue}vw` }}>
-
-        {imgArr.map ((img, index) => (
-          <img src={img} alt="logement" key={index}/>
+      <div
+        className="caroussel__container"
+        style={{
+          transform: `translateX(-${current * TranslateXValue}vw)`,
+          width: `${arrLength * TranslateXValue}vw`,
+        }}
+      >
+        {imgArr.map((img, index) => (
+          <img src={img} alt="logement" key={index} />
         ))}
       </div>
       {arrLength > 1 && (
