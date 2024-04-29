@@ -1,22 +1,29 @@
-import HousingCards from "../../components/HousingCards";
-import Banner from "../../components/Banner";
-import { useContext } from "react";
-import { dataContext } from "../../App";
-
+import Advert from "./sections/Advert";
+import Benefits from "./sections/Benefits";
+import Faq from "./sections/Faq";
+import Hero from "./sections/Hero";
+import LodgeList from "./sections/LodgeList";
+import Popular from "./sections/Popular";
+import Recruit from "./sections/Recruit";
+import Rental from "./sections/Rental";
 
 const Home = () => {
+  // const { allLodges } = useContext(dataContext);
 
-  const { allLodges } = useContext(dataContext)
+  // const [data] = allLodges;
 
-  const [data] = allLodges
-
-  
   return (
     <section>
-      {data ? (
-        <>
-          <Banner name="banner--home" title="Chez vous, partout et ailleurs" />
-          <div className="housing">
+      {/* <Banner name="banner--home" title="Chez vous, partout et ailleurs" /> */}
+      <Hero />
+      <Benefits />
+      <Advert />
+      <Popular />
+      <Rental />
+      <LodgeList />
+      <Faq />
+      <Recruit />
+      {/* <div className="housing">
             <div className="housing__wrapper">
               {data.map((item, index) => (
                 <HousingCards
@@ -28,11 +35,7 @@ const Home = () => {
                 />
               ))}
             </div>
-          </div>
-        </>
-      ) : (
-        "chargement en cours"
-      )}
+          </div> */}
     </section>
   );
 };

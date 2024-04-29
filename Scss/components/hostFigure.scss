@@ -1,0 +1,16 @@
+@use "../utils/" as *;
+
+.host_figure {
+  filter: grayscale(100%);
+  margin-left: -10px;
+
+  img {
+    border-radius: 50%;
+    width: 64px;
+    border: 2px solid $white;
+
+    @include phone {
+      width: 32px;
+    }
+  }
+}

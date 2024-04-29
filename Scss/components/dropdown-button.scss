@@ -1,61 +1,61 @@
 @use "../utils/" as *;
 
 .dropdown {
-    flex: 1;
-    
-    &__button {
-        position: relative;
-        @include flex (center, space-between);
-        width: 100%;
-        border-radius: 5px;
-        background-color: $red;
-        color: white;
-        font-size: clamp(0.813rem, 0.57rem + 1.033vw, 1.5rem);
-        border: 0;
-        cursor: pointer;
-        padding: 10px 15px;
-        text-transform: capitalize;
-        z-index: 100;
-       
+  flex: 1;
 
-        &__arrow {
-            width: clamp(1.375rem, 1.155rem + 0.939vw, 2rem);
-            transition: transform 0.2s;
+  &__button {
+    position: relative;
+    @include flex(center, space-between);
+    width: 100%;
+    border-radius: 10px;
+    background-color: $white;
+    color: $black;
+    gap: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+    padding: 10px 15px;
+    z-index: 100;
 
-            &--rotate {
-                width: clamp(1.375rem, 1.155rem + 0.939vw, 2rem);
-                transform: rotate(-180deg);
-                transition: transform 0.2s;
-            }
-        }
+    span {
+      text-align: left;
     }
 
-    &__content {
-        position: relative;
-        background-color: $gray;
-        color: $red;
-        font-size: clamp(0.75rem, 0.618rem + 0.563vw, 1.125rem);
-        padding: 20px;
-        z-index: -100;
-        
-        &--open {
-            max-height: 200px;
-            margin-top: 0;
-            transition: all 0.3s ease-in;
-        }
+    &__arrow {
+      width: clamp(1.375rem, 1.155rem + 0.939vw, 2rem);
+      transition: transform 0.2s;
 
-        &--close {
-            max-height: 0;
-            margin-top: -43px;
-            opacity: 0;
-            transition: all 0.3s ease-out;
-        }
+      &--rotate {
+        width: clamp(1.375rem, 1.155rem + 0.939vw, 2rem);
+        transform: rotate(-180deg);
+        transition: transform 0.2s;
+      }
+    }
+  }
 
-        ul li {
-            padding-top: 2px;
-        }
+  &__content {
+    position: relative;
+    color: $black;
+    font-size: clamp(0.75rem, 0.618rem + 0.563vw, 1.125rem);
+    padding: 20px;
+    // z-index: -100;
 
+    &--open {
+      max-height: 200px;
+      margin-top: 0;
+      transition: all 0.3s ease-in;
     }
 
+    &--close {
+      max-height: 0;
+      margin-top: -43px;
+      opacity: 0;
+      transition: all 0.3s ease-out;
+    }
 
+    ul li {
+      padding-top: 2px;
+    }
+  }
 }

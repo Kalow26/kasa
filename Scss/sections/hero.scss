@@ -1,0 +1,124 @@
+@use "../utils/" as *;
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  height: auto;
+
+  @include screen {
+    flex-direction: row;
+    height: calc(100vh - 80px);
+  }
+
+  .hero__left {
+    flex: 1;
+    width: 100%;
+
+    .title {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+
+      span {
+        font-weight: 400;
+        font-size: 26px;
+
+        @include tablet {
+          font-size: 32px;
+        }
+
+        @include screen {
+          font-size: 48px;
+        }
+      }
+
+      p {
+        // margin-block: 20px;
+        text-align: center;
+      }
+
+      .headline {
+        color: $dark-gray;
+      }
+    }
+
+    .button_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      align-items: center;
+      margin-top: 40px;
+
+      @include tablet {
+        flex-direction: row;
+      }
+    }
+  }
+
+  .hero__right {
+    flex: 1;
+    height: auto;
+    width: 100%;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: inherit;
+      object-fit: cover;
+      border-radius: $border-radius;
+
+      @include tablet {
+        height: 800px;
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      display: flex;
+      gap: 40px;
+
+      p {
+        font-size: 14px;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+        max-width: 180px;
+        font-weight: 600;
+      }
+    }
+
+    .btn_cat {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      align-items: center;
+      max-width: 175px;
+      cursor: pointer;
+      border-radius: 20px;
+      border: none;
+      background-color: $white;
+      min-height: 75px;
+      padding: 20px 10px;
+      text-align: left;
+      font-weight: bold;
+      font-size: 14px;
+      svg {
+        width: 25px;
+        height: 25px;
+        fill: $dark-gray;
+      }
+    }
+  }
+}

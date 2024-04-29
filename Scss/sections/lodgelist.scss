@@ -1,0 +1,143 @@
+@use "../utils/" as *;
+
+.lodgelist {
+  .title {
+    text-align: center;
+  }
+
+  .filter_btn-container {
+    display: flex;
+    justify-content: center;
+    margin-block: 50px;
+
+    .inner {
+      background-color: $gray;
+      border-radius: $border-radius;
+    }
+
+    .filter-btn:nth-child(1) {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-right: none;
+    }
+    .filter-btn:nth-child(3) {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-left: none;
+    }
+
+    .filter-btn:nth-child(2) {
+      border-right: none;
+      border-left: none;
+    }
+
+    .filter-btn {
+      padding: 15px 0;
+      background-color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      width: 100px;
+      border: none;
+      background-color: $gray;
+
+      @include tablet {
+        width: 120px;
+      }
+      @include screen {
+        width: 150px;
+      }
+
+      &:hover {
+        background-color: $dark-gray;
+        color: #fff;
+      }
+
+      &--active {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+
+  &_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include screen {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .lodgelist_item {
+      width: 100%;
+      height: 500px;
+      background-color: antiquewhite;
+      border-radius: $border-radius;
+      position: relative;
+
+      &:hover .desc {
+        max-height: 200px;
+      }
+
+      &_img {
+        border-radius: $border-radius;
+        position: relative;
+        overflow: hidden;
+        height: max-content;
+        background-color: aquamarine;
+        width: 100%;
+        height: 100%;
+
+        .overlay {
+          position: absolute;
+          bottom: 0px;
+          border-radius: $border-radius;
+          background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.6) 0%,
+            rgba(175, 248, 200, 0) 100%
+          );
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+
+        img {
+          width: inherit;
+          min-height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &_details {
+        color: $white;
+        position: absolute;
+        bottom: 20px;
+        padding-inline: 15px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow: hidden;
+        z-index: 2;
+
+        &_price {
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 10px;
+
+          h4 {
+            font-size: 12px;
+          }
+        }
+        .desc {
+          font-size: 14px;
+          max-height: 0;
+          transition: max-height 0.3s;
+        }
+      }
+    }
+  }
+}

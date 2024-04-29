@@ -1,0 +1,15 @@
+.popular_cursor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-number {
+    font-size: 64px;
+    font-weight: 400;
+  }
+
+  p {
+    text-align: left;
+    max-width: 30%;
+  }
+}

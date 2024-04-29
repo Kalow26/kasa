@@ -1,35 +1,209 @@
 @use "../utils/" as *;
 
 .footer {
-    background-color: $black;
-    margin-top: 50px;
+  background-color: $black;
+  margin-top: 50px;
+  padding-inline: 20px;
+  color: $white;
 
-    &__content {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding-block: 100px;
+    gap: 50px;
+    min-height: 80vh;
+
+    @include screen {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 30px;
+      flex: 1;
+
+      @include screen {
+        padding-bottom: 0;
+      }
+
+      .logo {
+        span {
+          padding-top: 5px;
+          display: block;
+        }
+      }
+      .newsletter {
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
+        gap: 20px;
+
+        h3 {
+          color: $white;
+        }
+
+        input {
+          width: 100%;
+          border: none;
+          padding: 10px;
+          background-color: $black;
+          border-bottom: 1px solid $white;
+          color: $black;
+          outline: none;
+        }
+
+        button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 50px;
+          background-color: $white;
+          color: $black;
+          cursor: pointer;
+          width: 150px;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: $gray;
+          }
+        }
+      }
+    }
+
+    &-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 30px;
+      flex: 1;
+
+      @include screen {
+        padding-bottom: 0;
         align-items: center;
-        justify-content: center;
-        padding-block: 66px 29px;
-        gap: 28px;
+      }
+
+      .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h3 {
+          color: $white;
+          font-weight: 500;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          li {
+            a {
+              color: $white;
+              text-decoration: none;
+              transition: color 0.3s;
+              font-size: 18px;
+
+              &:hover {
+                color: $gray;
+              }
+            }
+          }
+        }
+      }
+
+      .adress {
+        margin-top: 50px;
+
+        @include screen {
+          margin-top: 0;
+        }
+
+        img {
+          width: 100%;
+        }
 
         p {
+          color: $white;
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+
+      @include screen {
+        align-items: flex-end;
+      }
+
+      .top {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .avatar {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          span {
+            font-size: 14px;
+            font-weight: 500;
+            display: block;
+            padding-bottom: 5px;
+          }
+
+          p {
             color: $white;
-            font-size: 24px;
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
 
-            @include phone {
-                font-size: 12px;
-                width: 122px;
-                text-align: center;
+        .contact {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+
+          button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            background-color: $white;
+            color: $black;
+            cursor: pointer;
+            width: 150px;
+            transition: background-color 0.3s;
+
+            &:hover {
+              background-color: $gray;
             }
-        }
+          }
 
-        @include phone {
-            gap: 12px;
-            padding-bottom: 58px;
-        }
-    }
+          svg {
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            transition: color 0.3s;
 
-    @include phone {
-        margin-top: 20px;
+            &:hover {
+              color: $gray;
+            }
+          }
+        }
+      }
+
+      .bottom {
+        margin-top: 50px;
+      }
     }
+  }
 }

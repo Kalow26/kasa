@@ -1,0 +1,29 @@
+@use "../utils/" as *;
+
+.tags {
+  display: flex;
+  gap: 10px;
+  font-size: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @include screen {
+    flex-wrap: nowrap;
+    font-size: 12px;
+  }
+
+  li {
+    background-color: $white;
+    color: $black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    min-height: 30px;
+    display: grid;
+    place-content: center;
+
+    @include screen {
+      min-width: 100px;
+    }
+  }
+}

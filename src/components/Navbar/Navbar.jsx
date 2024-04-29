@@ -1,19 +1,18 @@
-import LogoKasa from '../LogoKasa';
-import NavLinks from './NavLinks';
 import { Link } from "react-router-dom";
-
+import LogoKasa from "../LogoKasa";
+import NavLinks from "./NavLinks";
 
 const Navbar = () => {
   return (
-    <header className='navbar'>
+    <header className="navbar">
       <div className="navbar__logo">
         <Link to="/">
-          <LogoKasa logoVersion={"red"}/>
+          <LogoKasa logoVersion={"black"} />
         </Link>
       </div>
       <NavLinks />
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

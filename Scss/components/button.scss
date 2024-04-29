@@ -1,0 +1,56 @@
+@use "../utils/" as *;
+
+.main_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 10px 20px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+
+  .main_btn_icon {
+    background-color: $dark-gray;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.main_btn-black {
+  color: $white;
+  background-color: $black;
+  border: 1px solid $black;
+  &:hover {
+    background-color: inherit;
+    color: $black;
+  }
+}
+
+.main_btn-white {
+  color: $black;
+  background-color: $white;
+  border: 1px solid $black;
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
+}

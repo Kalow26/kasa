@@ -2,6 +2,7 @@
 	{
 		"id": "c67ab8a7",
 		"title": "Appartement cosy",
+		"type": "appartement",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
@@ -26,12 +27,15 @@
 		],
 		"tags": [
 			"Batignolle",
-			"Montmartre"
-		]
+			"Montmartre",
+			"Appartement"
+		],
+		"price": 55
 	},
 	{
 		"id": "b9123946",
-		"title": "Magnifique appartement proche Canal Saint Martin",
+		"title": "Magnifique appartement Saint Martin",
+		"type": "appartement",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg",
@@ -60,11 +64,13 @@
 			"Canal Saint Martin",
 			"République",
 			"Appartement"
-		]
+		],
+		"price": 74
 	},
 	{
 		"id": "46d188c5",
 		"title": "Studio de charme - Buttes Chaumont",
+		"type": "studio",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-2-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-2-1.jpg",
@@ -89,11 +95,13 @@
 			"Buttes Chaumont",
 			"Laumière",
 			"Studio"
-		]
+		],
+		"price": 69
 	},
 	{
 		"id": "7af00cd6",
 		"title": "Nid douillet au coeur du 11ème",
+		"type": "appartement",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-3-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-3-1.jpg",
@@ -118,13 +126,15 @@
 		"tags": [
 			"Parmentier",
 			"Marais",
-			"Parc",
+			"Appartement",
 			"Night Life"
-		]
+		],
+		"price": 88
 	},
 	{
 		"id": "0979876d",
 		"title": "Appartement de Standing - 10e",
+		"type": "appartement",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-4-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-4-1.jpg",
@@ -150,12 +160,15 @@
 		],
 		"tags": [
 			"Goncourt",
-			"Proche commerces"
-		]
+			"Proche commerces",
+			"Appartement"
+		],
+		"price": 130
 	},
 	{
 		"id": "f72a452f",
 		"title": "Studio d'artiste",
+		"type": "studio",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-5-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-5-1.jpg",
@@ -178,12 +191,15 @@
 		"tags": [
 			"Montmartre",
 			"Culture",
-			"Charme"
-		]
+			"Charme",
+			"studio"
+		],
+		"price": 59
 	},
 	{
 		"id": "b4c67936",
 		"title": "Cheap - Studio 18ème",
+		"type": "studio",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-6-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-6-1.jpg",
@@ -209,12 +225,15 @@
 		"tags": [
 			"Transports",
 			"Cheap",
-			"18ème"
-		]
+			"18ème",
+			"studio"
+		],
+		"price": 99
 	},
 	{
 		"id": "bc6f7112",
 		"title": "Superbe appartement proche Tour Eiffel",
+		"type": "appartement",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-7-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-7-1.jpg",
@@ -243,12 +262,14 @@
 			"Luxe",
 			"Tour Eiffel",
 			"T3",
-			"6ème"
-		]
+			"appartement"
+		],
+		"price": 149
 	},
 	{
 		"id": "cb2f9222",
 		"title": "Suite familiale",
+		"type": "appartement",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-8-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-8-1.jpg",
@@ -274,12 +295,15 @@
 		"tags": [
 			"Montparnasse",
 			"Commerces",
-			"Famille"
-		]
+			"Famille",
+			"appartement"
+		],
+		"price": 199
 	},
 	{
 		"id": "d60ca600",
 		"title": "Appartement moderne sur parc",
+		"type": "appartement",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-9-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-9-1.jpg",
@@ -306,12 +330,14 @@
 			"Père Lachaise",
 			"11e",
 			"Metro 3",
-			"Metro 2"
-		]
+			"appartement"
+		],
+		"price": 79
 	},
 	{
 		"id": "2cf259e1",
 		"title": "Charmant Studio Marais",
+		"type": "studio",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-10-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-10-1.jpg",
@@ -334,13 +360,15 @@
 		],
 		"tags": [
 			"Marais",
-			"Studio",
+			"studio",
 			"Parc"
-		]
+		],
+		"price": 49
 	},
 	{
 		"id": "5323c29b",
 		"title": "Studio fonctionnel République",
+		"type": "studio",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-11-3.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-11-3.jpg",
@@ -366,14 +394,16 @@
 		"tags": [
 			"Marais",
 			"République",
-			"Studio",
+			"studio",
 			"Proche Métros",
 			"Commerces"
-		]
+		],
+		"price": 52
 	},
 	{
 		"id": "af6d2d48",
 		"title": "Bungalow dans la forêt",
+		"type": "maison",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-12-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-12-1.jpg",
@@ -399,12 +429,15 @@
 		"tags": [
 			"Forêt",
 			"Nature",
-			"Musée d'Ecouen"
-		]
+			"Musée d'Ecouen",
+			"maison"
+		],
+		"price": 49
 	},
 	{
 		"id": "7cbb378e",
 		"title": "Grande Maison proche banlieue",
+		"type": "maison",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-13-2.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-13-2.jpg",
@@ -433,12 +466,14 @@
 		"tags": [
 			"Forêt",
 			"Nature",
-			"Grande maison"
-		]
+			"maison"
+		],
+		"price": 179
 	},
 	{
 		"id": "ba55a0cc",
 		"title": "Maison T5 - Le Vésinet",
+		"type": "maison",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-14-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-14-1.jpg",
@@ -469,12 +504,14 @@
 		"tags": [
 			"Nature",
 			"Groupe",
-			"Maison"
-		]
+			"maison"
+		],
+		"price": 139
 	},
 	{
 		"id": "1e181317",
 		"title": "Loft de Luxe à la Défense",
+		"type": "appartement",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-15-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-15-1.jpg",
@@ -502,12 +539,15 @@
 		"tags": [
 			"La Défense",
 			"Loft",
-			"Luxe"
-		]
+			"Luxe",
+			"appartement"
+		],
+		"price": 210
 	},
 	{
 		"id": "1e180563",
 		"title": "Charmant apt aux portes de Paris",
+		"type": "appartement",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-16-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-16-1.jpg",
@@ -533,12 +573,15 @@
 		],
 		"tags": [
 			"Vue Parc",
-			"Apt de Charme"
-		]
+			"Apt de Charme",
+			"appartement"
+		],
+		"price": 69
 	},
 	{
 		"id": "2139a317",
 		"title": "Cheap - Chambre Paris 20",
+		"type": "studio",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-17-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-17-1.jpg"
@@ -557,12 +600,15 @@
 		],
 		"tags": [
 			"Vue Parc",
-			"Métros"
-		]
+			"Métros",
+			"studio"
+		],
+		"price": 39
 	},
 	{
 		"id": "6ff132c6",
 		"title": "Charmant studio",
+		"type": "studio",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-18-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-18-1.jpg",
@@ -584,14 +630,16 @@
 			"Micro-Ondes"
 		],
 		"tags": [
-			"Studio",
+			"studio",
 			"Charmant",
 			"13e"
-		]
+		],
+		"price": 59
 	},
 	{
 		"id": "cb02d69b",
 		"title": "Magnifique appartement Rivoli",
+		"type": "appartement",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-19-1.jpg",
 		"pictures": [
 			"https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-19-1.jpg"
@@ -613,7 +661,9 @@
 		"tags": [
 			"Louvre",
 			"Marais",
-			"Rivoli"
-		]
+			"Rivoli",
+			"appartement"
+		],
+		"price": 79
 	}
 ]

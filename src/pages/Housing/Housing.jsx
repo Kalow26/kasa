@@ -1,25 +1,24 @@
-import { useParams, useNavigate } from "react-router-dom";
-import RatingStars from "../../components/RatingStars";
+import { useContext, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { dataContext } from "../../App";
 import Caroussel from "../../components/Caroussel";
 import DropDownMenu from "../../components/DropDownMenu";
 import HostFigure from "../../components/HostFigure";
 import LodgeTags from "../../components/LodgeTags";
-import { useContext, useEffect } from "react";
-import { dataContext } from "../../App";
+import RatingStars from "../../components/RatingStars";
 
 const Housing = () => {
   const navigate = useNavigate();
   const { allLodges } = useContext(dataContext);
 
-  const [data] = allLodges;
   let { id } = useParams();
-  const lodge = data.find((item) => id === item.id);
+  const lodge = allLodges.find((item) => id === item.id);
 
   useEffect(() => {
     if (!lodge) {
       navigate("/error");
     }
-  }, [lodge]);
+  }, [lodge, navigate]);
 
   return (
     <>

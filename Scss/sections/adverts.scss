@@ -1,0 +1,92 @@
+@use "../utils/" as *;
+
+.advert {
+  margin-block: 100px;
+  position: relative;
+  height: 100vh;
+
+  .bg-container {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: $border-radius;
+    }
+  }
+
+  .content {
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    color: $white;
+
+    @include screen {
+      width: auto;
+    }
+
+    .subtitle {
+      font-size: 36px;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .emphasis {
+      font-weight: 500;
+
+      @include screen {
+        font-size: 196px;
+      }
+    }
+
+    .olympic-rings {
+      width: 80%;
+
+      @include screen {
+        width: 100%;
+      }
+    }
+
+    .olympic__res {
+      height: max-content;
+      background-color: rgba(#ffff, 0.9);
+      border-radius: $border-radius;
+      margin-top: 30px;
+
+      &-inner {
+        color: $black;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 30px;
+        gap: 20px;
+
+        p {
+          font-size: 18px;
+          span {
+            font-weight: 600;
+            margin-top: 10px;
+            display: block;
+            margin-top: 10px;
+          }
+        }
+
+        .res_btn {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
