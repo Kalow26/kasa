@@ -31,7 +31,6 @@
   &__desc {
     background-color: $gray;
     padding-top: 20px;
-    padding-bottom: 40px;
     padding-inline: 20px;
     border-radius: 10px;
     @include flex(stretch, center, column, 30px);
