@@ -11,7 +11,7 @@ const HousingCard = ({ title, cover, id, tags, price }) => {
           <p>{title}</p>
           <span>{price} € / nuit</span>
         </div>
-        <LodgeTags tags={tags} />
+        <LodgeTags tags={tags} variant="white" />
       </div>
     </Link>
   );

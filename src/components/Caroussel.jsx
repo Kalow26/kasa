@@ -1,9 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import arrowLeft from "../assets/arrow-left.svg";
 import arrowRight from "../assets/arrow-right.svg";
 
 const Caroussel = ({ imgArr }) => {
-  const TranslateXValue = 100;
+  const [size] = useState(window.innerWidth);
+  const [TranslateXValue, setTranslateXValue] = useState(0);
+
+  useEffect(() => {
+    setTranslateXValue(document.querySelector(".caroussel")?.clientWidth);
+    const resize = () => {
+      setTranslateXValue(document.querySelector(".caroussel")?.clientWidth);
+    };
+    window.addEventListener("resize", resize);
+
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
+  }, [size]);
 
   const clickRight = () => {
     setCurrent(current === arrLength - 1 ? 0 : (prev) => prev + 1);
@@ -20,12 +33,17 @@ const Caroussel = ({ imgArr }) => {
       <div
         className="caroussel__container"
         style={{
-          transform: `translateX(-${current * TranslateXValue}vw)`,
-          width: `${arrLength * TranslateXValue}vw`,
+          transform: `translateX(-${current * TranslateXValue}px)`,
+          width: `${arrLength * TranslateXValue}px`,
         }}
       >
         {imgArr.map((img, index) => (
-          <img src={img} alt="logement" key={index} />
+          <img
+            src={img}
+            alt="logement"
+            key={index}
+            style={{ width: `${TranslateXValue}px` }}
+          />
         ))}
       </div>
       {arrLength > 1 && (

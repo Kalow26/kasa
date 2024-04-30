@@ -4,7 +4,7 @@ import NavLinks from "./NavLinks";
 
 const Navbar = () => {
   return (
-    <header className="navbar">
+    <header className="navbar container">
       <div className="navbar__logo">
         <Link to="/">
           <LogoKasa logoVersion={"black"} />

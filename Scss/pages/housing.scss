@@ -1,49 +1,13 @@
 @use "../utils/" as *;
 
 .lodge {
-  width: 100%;
-
   &__content {
     @include flex(center, space-between);
-    color: $red;
     padding-block: 30px;
-    padding-inline: 5px;
-    width: 100%;
 
     &__info {
       @include flex(flex-start, flex-start, column);
-      // flex: 1;
-
-      h2 {
-        font-size: clamp(1.125rem, 0.729rem + 1.69vw, 2.25rem);
-        font-weight: 400;
-      }
-
-      h3 {
-        font-size: clamp(0.875rem, 0.787rem + 0.376vw, 1.125rem);
-        font-weight: 400;
-      }
-    }
-    &__tags {
-      padding-top: 20px;
-      @include flex(center, flex-start, row, 10px);
-
-      li {
-        padding: 2px 30px;
-        text-align: center;
-        background-color: $black;
-        color: $white;
-        font-size: clamp(0.625rem, 0.537rem + 0.376vw, 0.875rem);
-        border-radius: 10px;
-
-        @include phone {
-          padding: 2px 10px;
-        }
-
-        @include tablet {
-          padding: 2px 12px;
-        }
-      }
+      gap: 20px;
     }
 
     &__host {
@@ -65,10 +29,13 @@
   }
 
   &__desc {
-    @include flex(flex-start, space-between, row, 76px);
+    background-color: $gray;
+    padding: 20px;
+    border-radius: 10px;
+    @include flex(stretch, center, column, 20px);
 
     @include tablet {
-      @include flex(stretch, center, column, 20px);
+      @include flex(flex-start, space-between, row, 76px);
     }
   }
 }

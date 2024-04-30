@@ -23,12 +23,12 @@ const Housing = () => {
   return (
     <>
       {lodge && (
-        <section className="lodge">
+        <section className="lodge container">
           <Caroussel imgArr={lodge.pictures} />
           <div className="lodge__content">
             <div className="lodge__content__info">
-              <h2>{lodge.title}</h2>
-              <h3>{lodge.location}</h3>
+              <h3>{lodge.title}</h3>
+              <p>{lodge.location}</p>
               <LodgeTags tags={lodge.tags} />
             </div>
             <div className="lodge__content__host">

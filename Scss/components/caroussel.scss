@@ -1,55 +1,60 @@
 @use "../utils/" as *;
 
 .caroussel {
-    position: relative;
-    overflow: hidden;
-    height: clamp(15.938rem, 12.416rem + 15.023vw, 25.938rem);
+  position: relative;
+  overflow: hidden;
+  border-radius: $border-radius;
+
+  @include tablet {
+    height: 400px;
+  }
+  @include screen {
+    height: 600px;
+  }
+
+  &__container {
+    display: flex;
+    transition: all 1s ease;
     width: 100%;
-    border-radius: 25px;
-   
-    &__container {
-        height: 100%;
-        display: flex;
-        transition: all 1s ease;
 
-        img {
-            width: 100vw;
-            height: 100%;
-            object-fit: cover;
-        }
+    img {
+      border-radius: $border-radius;
+      object-fit: cover;
     }
+  }
 
-    &__controls {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 100%;
-        @include flex (center, space-between);
+  &__controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    @include flex(center, space-between);
 
-        button {
-            all: unset;
-            cursor: pointer;
-            padding-inline: 23px;
+    button {
+      all: unset;
+      cursor: pointer;
+      padding-inline: 23px;
 
-           img {
-            @include tablet {
-                width: 24px;
-            }
-           }
+      img {
+        width: 24px;
+        @include screen {
+          width: 100%;
         }
+      }
     }
+  }
 
-    &__counter {
-        position: absolute;
-        bottom: 24px;
-        left: 50%;
-        color: $white;
-        font-size: 24px;
-        font-weight: 500;
+  &__counter {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    color: $white;
+    font-size: 24px;
+    font-weight: 500;
+    display: none;
 
-        @include phone {
-            display: none;
-        }
+    @include screen {
+      display: block;
     }
+  }
 }
-

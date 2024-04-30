@@ -14,8 +14,6 @@
   }
 
   li {
-    background-color: $white;
-    color: $black;
     padding: 5px 10px;
     border-radius: 5px;
     min-height: 30px;
@@ -26,4 +24,14 @@
       min-width: 100px;
     }
   }
+}
+
+.tags--white {
+  background-color: $white;
+  color: $black;
+}
+
+.tags--black {
+  background-color: $black;
+  color: $white;
 }

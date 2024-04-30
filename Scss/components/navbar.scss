@@ -3,7 +3,6 @@
 .navbar {
   padding-block: 20px 20px;
   @include flex(center, space-between);
-  margin-inline: 100px;
 
   &__logo img {
     width: 100px;
@@ -37,6 +36,5 @@
 
   @include tablet {
     margin-block: 20px 27px;
-    margin-inline: 20px;
   }
 }
