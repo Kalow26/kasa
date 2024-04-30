@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  gap: 50px;
+  gap: 70px;
   height: auto;
 
   @include screen {
@@ -18,10 +18,10 @@
     width: 100%;
 
     .title {
-      text-align: center;
+      text-align: left;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-start;
+      align-items: flex-start;
       flex-direction: column;
       gap: 20px;
 
@@ -34,17 +34,14 @@
         }
 
         @include screen {
-          font-size: 48px;
+          font-size: 40px;
         }
-      }
-
-      p {
-        // margin-block: 20px;
-        text-align: center;
       }
 
       .headline {
         color: $dark-gray;
+        max-width: 60%;
+        font-size: 20px;
       }
     }
 

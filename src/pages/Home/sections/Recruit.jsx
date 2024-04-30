@@ -13,7 +13,7 @@ const Recruit = () => {
           Kasa c'est plus de 10 agences en France, une croissance a 6 chiffres
           et des experts passionés qui partagent un même objectif, la
           satisfaction de leurs clients. Vous avez envie de participer à
-          l'aventure ? cliquez sur le bouton ci dessous et posutuler dés
+          l'aventure ? cliquez sur le bouton ci dessous et postulez dés
           aujourd'hui
         </p>
 

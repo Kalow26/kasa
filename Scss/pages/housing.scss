@@ -30,9 +30,11 @@
 
   &__desc {
     background-color: $gray;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-inline: 20px;
     border-radius: 10px;
-    @include flex(stretch, center, column, 20px);
+    @include flex(stretch, center, column, 30px);
 
     @include tablet {
       @include flex(flex-start, space-between, row, 76px);

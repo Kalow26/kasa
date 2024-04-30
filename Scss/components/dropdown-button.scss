@@ -8,8 +8,7 @@
     @include flex(center, space-between);
     width: 100%;
     border-radius: 10px;
-    background-color: $white;
-    color: $black;
+    // background-color: white;
     gap: 30px;
     font-size: 16px;
     font-weight: 600;
@@ -36,22 +35,18 @@
 
   &__content {
     position: relative;
-    color: $black;
-    font-size: clamp(0.75rem, 0.618rem + 0.563vw, 1.125rem);
     padding: 20px;
-    // z-index: -100;
 
     &--open {
       max-height: 200px;
-      margin-top: 0;
-      transition: all 0.3s ease-in;
+      transition: all 0.2s ease-in;
     }
 
     &--close {
       max-height: 0;
-      margin-top: -43px;
+      margin-top: -60px;
       opacity: 0;
-      transition: all 0.3s ease-out;
+      transition: all 0.2s ease-out;
     }
 
     ul li {
