@@ -1138,7 +1138,7 @@ h2 {
 }
 .dropdown__content {
   position: relative;
-  padding: 20px;
+  padding: 40px;
 }
 .dropdown__content--open {
   max-height: 200px;
@@ -1438,7 +1438,6 @@ h2 {
 .lodge__desc {
   background-color: #e6e6e6;
   padding-top: 20px;
-  padding-bottom: 40px;
   padding-inline: 20px;
   border-radius: 10px;
   display: flex;
