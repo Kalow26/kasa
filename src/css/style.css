@@ -1123,6 +1123,7 @@ h2 {
   cursor: pointer;
   padding: 10px 15px;
   z-index: 100;
+  gap: 10px;
 }
 .dropdown__button span {
   text-align: left;
@@ -1141,14 +1142,14 @@ h2 {
   padding: 40px;
 }
 .dropdown__content--open {
-  max-height: 200px;
-  transition: all 0.2s ease-in;
+  max-height: max-content;
+  transition: all 0.2s;
 }
 .dropdown__content--close {
   max-height: 0;
-  margin-top: -60px;
+  margin-top: -65px;
   opacity: 0;
-  transition: all 0.2s ease-out;
+  transition: all 0.2s;
 }
 .dropdown__content ul li {
   padding-top: 2px;
@@ -1377,6 +1378,7 @@ h2 {
   height: 400px;
   object-fit: cover;
   border-radius: 30px;
+  margin-bottom: 20px;
 }
 .about__items {
   display: flex;
