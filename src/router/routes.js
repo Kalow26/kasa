@@ -2,12 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import Housing from "../pages/Housing/Housing";
 import About from "../pages/About/About";
-import Error from "../components/ErrorPage/Error";
+import Error from "../pages/ErrorPage/Error";
 import {Layout} from "./layout"
-
-
-
-
 
 export const router = createBrowserRouter ( [
     {

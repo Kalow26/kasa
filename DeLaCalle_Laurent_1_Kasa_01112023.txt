@@ -1,0 +1,7 @@
+Lien Github
+
+!!! Attention bien lire le Readme. Le dossier contient 2 branches avec 2 méthodes de récupérations des données.
+
+Merci
+
+https://github.com/Kalow26/kasa.git
